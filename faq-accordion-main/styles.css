@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'WorkSans';
+    src: url('./assets/fonts/WorkSans-VariableFont_wght.ttf');
+}
+
+@media (min-width: 768px) {
+    body {
+        background-image: url('./assets/images/background-pattern-desktop.svg');
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        background-image: url('./assets/images/background-pattern-mobile.svg');
+    }
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: WorkSans, sans-serif;
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-pink: hsl(275, 100%, 97%);
+    --clr-grayish-purple: hsl(292, 16%, 49%);
+    --clr-dark-purple: hsl(292, 42%, 14%);
+    
+}
+
+body {
+    background-color: var(--clr-pink);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1.5rem;
+    font-size: 16px;
+}
+
+#faq-container {
+    background-color: var(--clr-white);
+    color: var(--clr-dark-purple);
+    margin: auto;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    max-width: 600px;
+    
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+img {
+    height: 30px;
+    width: auto;
+    margin-right: 2rem;
+    
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+li:not(:last-child) {
+    border-bottom: 2px solid var(--clr-pink);
+
+}
+
+li:last-child p, li:last-child div.question {
+    padding-bottom: 0;
+}
+
+div.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem 0;
+
+}
+
+.question img {
+    height: 2.25rem;
+    margin: 0.5rem
+
+}
+
+h3 {
+    font-weight:600;
+    font-size: 1.25rem;
+    margin:1rem 0rem;
+}
+
+p {
+    color: var(--clr-grayish-purple);
+    font-weight: 400;
+    padding-bottom: 1.5rem;
+    
+}
+
+p.hidden {
+    display: none;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
