@@ -21,5 +21,107 @@ body {
     font-size: 16px;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 500;
+    background-color: var(--clr-very-light-grayish-blue);
+    color: var(--clr-dark-grayish-blue)
 
+}
+
+.notification-container {
+    border-radius: 1rem;
+    background-color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    
+}
+
+.notification-counter {
+    background-color: var(--clr-blue);
+    color: var(--clr-white);
+    padding: 0.1rem 0.75rem;
+    border-radius: 0.3rem;
+    font-weight: 800;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+h3 {
+    font-weight: 800;
+    color: var(--clr-very-dark-blue);
+    margin-bottom: 1rem;
+}
+
+.post {
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+}
+
+.post-content {
+    margin-left: 0.5rem;
+}
+
+.unread {
+    background-color: var(--clr-very-light-grayish-blue);
+}
+
+.unread p.post-text::after {
+    content: '';
+    height: 0.6rem;
+    width: 0.6rem;
+    border-radius: 50%;
+    background-color: var(--clr-red);
+    margin-left: 0.5rem;
+    display: inline-block;
+    
+}
+
+span.user-name {
+    font-weight: 800;
+    color: var(--clr-very-dark-blue);
+    margin-right: 0.2rem;
+}
+
+p.time {
+    color: var(--clr-grayish-blue);
+    font-size: 0.9rem;
+}
+
+a {
+    color: var(--clr-blue);
+    font-weight: 800;
+    text-decoration: none;
+    margin: 0 0.2rem;
+}
+
+.private-message {
+    border: 1px solid var(--clr-light-grayish-blue-2);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.attribution {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+img.profile-picture {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+}
+
+img.preview-picture {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 0.5rem;
+    margin-left: 1rem;
 }
