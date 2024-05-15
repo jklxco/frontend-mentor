@@ -22,8 +22,13 @@ body {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 500;
     background-color: var(--clr-very-light-grayish-blue);
-    color: var(--clr-dark-grayish-blue)
+    color: var(--clr-dark-grayish-blue);
 
+}
+
+button {
+    border: none;
+    background-color: inherit;
 }
 
 .notification-container {
@@ -48,19 +53,31 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
 h3 {
     font-weight: 800;
     color: var(--clr-very-dark-blue);
-    margin-bottom: 1rem;
 }
+
+button {
+    cursor: pointer;
+    color: inherit;
+    font-size: 1rem;
+    font: inherit;
+}
+
+.mark-all:hover {
+    color: var(--clr-blue);
+}   
 
 .post {
     padding: 1rem;
     margin: 0.5rem;
     border-radius: 0.5rem;
     display: flex;
+    position: relative;
 }
 
 .post-content {
@@ -82,22 +99,30 @@ h3 {
     
 }
 
-span.user-name {
+a {
+    color: var(--clr-dark-grayish-blue);
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.user-name {
     font-weight: 800;
     color: var(--clr-very-dark-blue);
     margin-right: 0.2rem;
 }
 
+a.page-link {
+    margin-left: 0.2rem;
+}
+
+a:hover {
+    color:var(--clr-blue)
+}
+
 p.time {
     color: var(--clr-grayish-blue);
     font-size: 0.9rem;
-}
-
-a {
-    color: var(--clr-blue);
-    font-weight: 800;
-    text-decoration: none;
-    margin: 0 0.2rem;
 }
 
 .private-message {
@@ -107,21 +132,43 @@ a {
     margin-top: 1rem;
 }
 
-.attribution {
-    margin-top: 5rem;
-    margin-bottom: 1rem;
+.private-message:hover {
+    background-color: var(--clr-light-grayish-blue-1);
+    cursor: pointer;
 }
 
 img.profile-picture {
     border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     margin-right: 0.5rem;
 }
 
 img.preview-picture {
-    height: 3rem;
-    width: 3rem;
+    height: 2.5rem;
+    width: 2.5rem;
     border-radius: 0.5rem;
-    margin-left: 1rem;
+    position: absolute;
+    right: 1rem;
+}
+
+/* ATTRIBUTION */
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+    }
+    .notification-container {
+        width: min(80%, 800px);
+    }
 }
